@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html>
+<head><title>KSLC METAR Feed</title></head>
+<body>
+<p>This repository serves KSLC METAR data as a static JSON file updated every 10 minutes.</p>
+<p><a href="metar.json">metar.json</a></p>
+</body>
+</html>

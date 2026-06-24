@@ -2,8 +2,12 @@ name: Update KSLC METAR Data
 
 on:
   schedule:
-    # Runs every 10 minutes. GitHub Actions minimum is 5 minutes.
-    - cron: '*/10 * * * *'
+    # Runs at minute 29 and minute 59 of every hour (UTC).
+    # METARs are issued around minute 53-54, so the 59-minute run catches
+    # the new ob shortly after it's published, and the 29-minute run catches
+    # any SPECI or correction issued mid-hour.
+    - cron: '29 * * * *'
+    - cron: '59 * * * *'
   # Also allows manual trigger from the Actions tab
   workflow_dispatch:
 
